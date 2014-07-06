@@ -25,6 +25,11 @@ void Klient::exportHTML()
 
 }
 
+void Klient::wyswietl()
+{
+
+}
+
 bool Klient::operator == (const Klient &L) const
 {
 	return 0; //return (id == L.id);											// DO POPRAWY !!!
