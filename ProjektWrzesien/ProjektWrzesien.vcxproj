@@ -61,17 +61,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Czlowiek.cpp" />
+    <ClCompile Include="Error.cpp" />
     <ClCompile Include="Klient.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Pracownik.cpp" />
+    <ClCompile Include="Przycisk.cpp" />
     <ClCompile Include="Sprzet.cpp" />
     <ClCompile Include="Zlecenie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Const.h" />
     <ClInclude Include="Czlowiek.h" />
+    <ClInclude Include="Error.h" />
     <ClInclude Include="Klient.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Pracownik.h" />
+    <ClInclude Include="Przycisk.h" />
     <ClInclude Include="Sprzet.h" />
     <ClInclude Include="Zlecenie.h" />
   </ItemGroup>
