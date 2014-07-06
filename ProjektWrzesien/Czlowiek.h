@@ -18,11 +18,13 @@ public:
 	virtual void serializuj();
 	virtual void deserializuj();
 	virtual void wyswietl();
+
 	int getId(){ return id;}
 	string getNazwisko(){ return nazwisko;}
 	string getTelefon(){ return telefon;}
 	string getEmail(){ return email;}
 	string getAdres(){ return adres;}
+
 	void setId(const int _id);
 	void setImie(const string _imie);
 	void setNazwisko(const string _nazwisko);

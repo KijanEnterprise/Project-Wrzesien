@@ -27,11 +27,14 @@
     <ClCompile Include="Klient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sprzet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zlecenie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Constant.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Czlowiek.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -39,6 +42,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Klient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprzet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Const.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Zlecenie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
