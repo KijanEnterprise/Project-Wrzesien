@@ -60,7 +60,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Czlowiek.cpp" />
+    <ClCompile Include="Klient.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pracownik.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constant.h" />
+    <ClInclude Include="Czlowiek.h" />
+    <ClInclude Include="Klient.h" />
+    <ClInclude Include="Pracownik.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
