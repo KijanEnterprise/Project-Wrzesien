@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <conio.h>
 #include <iostream>
+#include <vector>
+#include <time.h>
+#include <string>
+#include <fstream>
 using namespace std;
 
 class Czlowiek

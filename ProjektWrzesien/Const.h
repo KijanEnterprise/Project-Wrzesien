@@ -1,5 +1,5 @@
 #pragma once
-#include <time.h>
+
 
 enum StanZlecenia {Przyjety=0,Diagnozowany=1,OczekujacyNaCzesci=2,GotowyDoOdbioru=3,Wydany=4};
 
