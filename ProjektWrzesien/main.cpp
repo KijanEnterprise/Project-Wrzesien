@@ -4,6 +4,10 @@
 #include "Klient.h"
 #include "Sprzet.h"
 #include "Zlecenie.h"
+#include "Error.h"
+#include "Przycisk.h"
+#include "Menu.h"
+
 
 class dat2
 {
@@ -30,4 +34,5 @@ int main()
 	//cout << prac.getDataZatrudnienia().tm_min;
 	//////testing
 	cin.get();
-}
+
+};
