@@ -1,6 +1,6 @@
 #include "Klient.h"
 
-Klient::Klient(const int _id,const string _imie,const string _nazwisko,const string _telefon,const string _email,const string _adres):
+Klient::Klient(const unsigned int _id,const string _imie,const string _nazwisko,const string _telefon,const string _email,const string _adres):
 	Czlowiek(_id,_imie,_nazwisko,_telefon,_email,_adres)
 {
 	setId(_id);

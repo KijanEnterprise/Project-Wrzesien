@@ -1,7 +1,9 @@
 #pragma once
 #include <stdio.h>
 #include <iostream>
+#include <string>
 #include "Const.h"
+#include "Error.h"
 using namespace std;
 
 class Sprzet

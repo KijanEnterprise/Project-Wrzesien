@@ -1,1 +1,44 @@
-﻿  ProjektWrzesien.vcxproj -> C:\Users\Lukas\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe
+﻿Build started 2014-07-12 00:50:11.
+     1>Project "C:\Users\alexc_000\Documents\Project-Wrzesien\ProjektWrzesien\ProjektWrzesien.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\ProjektWrzesien.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Sprzet.cpp Zlecenie.cpp main.cpp
+         Zlecenie.cpp
+         Sprzet.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(34): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(34): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(99) : see declaration of 'gmtime'
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(18): warning C4101: 'data' : unreferenced local variable
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(69): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(96): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(127): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ProjektWrzesien.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.lib" /MACHINE:X86 Debug\Czlowiek.obj
+         Debug\Error.obj
+         Debug\Klient.obj
+         Debug\main.obj
+         Debug\Menu.obj
+         Debug\Pracownik.obj
+         Debug\Przycisk.obj
+         Debug\Sprzet.obj
+         Debug\Zlecenie.obj
+         LINK : C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe not found or not built by the last incremental link; performing full link
+         ProjektWrzesien.vcxproj -> C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe;#1" /manifest Debug\ProjektWrzesien.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\ProjektWrzesien.unsuccessfulbuild".
+         Touching "Debug\ProjektWrzesien.lastbuildstate".
+     1>Done Building Project "C:\Users\alexc_000\Documents\Project-Wrzesien\ProjektWrzesien\ProjektWrzesien.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.31

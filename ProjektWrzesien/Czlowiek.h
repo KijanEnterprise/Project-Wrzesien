@@ -6,19 +6,20 @@
 #include <time.h>
 #include <string>
 #include <fstream>
+#include "Error.h"
 using namespace std;
 
 class Czlowiek
 {
 private:
-	int id;
+	unsigned int id;
 	string imie;
 	string nazwisko;
 	string telefon;
 	string email;
 	string adres;
 public:
-	Czlowiek(const int _id,const string _imie,const string _nazwisko,const string _telefon,const string _email,const string _adres);
+	Czlowiek(const unsigned int _id,const string _imie,const string _nazwisko,const string _telefon,const string _email,const string _adres);
 	virtual void serializuj();
 	virtual void deserializuj();
 	virtual void wyswietl();
