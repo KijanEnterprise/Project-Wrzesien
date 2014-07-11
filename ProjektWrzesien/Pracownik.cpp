@@ -36,36 +36,15 @@ void Pracownik::serializuj()
 
 }
 
-void Pracownik::deserializuj(vector<Pracownik> &Pracownicy)
+void Pracownik::deserializuj()
 {
-	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;
-	char separator = ';';
-	char konieclini = '\n';
-	time_t czas;
-	tm *data;
-	fstream plik;
-	plik.open("pracownicy.csv");
-	while (!plik.eof())
-	{
-		getline(plik,dana0,separator);
-		getline(plik,dana1,separator);
-		getline(plik,dana2,separator);
-		getline(plik,dana3,separator);
-		getline(plik,dana4,separator);
-		getline(plik,dana5,separator);
-		getline(plik,dana6,separator);
-		getline(plik,dana7,separator);
-		getline(plik,dana8,separator);
-		czas=atoi(dana8.c_str());
-		Pracownik Pracownik(atoi(dana0.c_str()),dana1,dana2,dana3,dana4,dana5,atof(dana6.c_str()),dana7,gmtime(&czas));
-		Pracownicy.push_back(Pracownik);
-	}
-	plik.close();
 }
 
 void Pracownik::wyswietl()
 {
-
+	char bufor[64];
+	strftime(bufor,sizeof(bufor),"%d-%m-%Y",dataZatrudnienia);
+	cout << getId() << "\t" << getImie() << "\t" << getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << "\t" <<  getWyplata() << "\t" << getNrRachunku() << "\t" << bufor << endl;
 }
 
 void Pracownik::exportHTML()

@@ -16,37 +16,19 @@ void Klient::serializuj()
 
 }
 
-void Klient::deserializuj(vector<Klient> &Klienci)
+void Klient::deserializuj()
 {
-	string dana0,dana1,dana2,dana3,dana4,dana5;
-	int rodzaj;
-	char separator = ';';
-	char konieclini = '\n';
-	fstream plik;
-	plik.open("klienci.csv");
-	while (!plik.eof())
-	{
-		getline(plik,dana0,separator);
-		getline(plik,dana1,separator);
-		getline(plik,dana2,separator);
-		getline(plik,dana3,separator);
-		getline(plik,dana4,separator);
-		getline(plik,dana5,separator);		
-		Klient Klient(atoi(dana0.c_str()),dana1,dana2,dana3,dana4,dana5);
-		Klienci.push_back(Klient);
-	}
-	plik.close();
+
 }
 
 void Klient::exportHTML()
 {
-
 }
 
 void Klient::wyswietl()
 {
-
-}
+	cout << getId() << "\t" << getImie() << "\t" <<  getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << endl;
+} 
 
 bool Klient::operator == (const Klient &L) const
 {

@@ -24,6 +24,7 @@ public:
 	virtual void wyswietl();
 
 	int getId(){ return id;}
+	string getImie() { return imie;}
 	string getNazwisko(){ return nazwisko;}
 	string getTelefon(){ return telefon;}
 	string getEmail(){ return email;}
