@@ -4,6 +4,9 @@ using namespace std;
 
 class Error
 {
-public:
+private:
 	string wiadomosc;
+public:
+	Error(string wiadomosc);
+	string getWiadomosc();
 };

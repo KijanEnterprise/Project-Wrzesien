@@ -11,10 +11,10 @@ Pracownik::Pracownik(const unsigned int _id,const string _imie, const string _na
 	setEmail(_email);
 	setAdres(_adres);
 	if (_wyplata<=0)
-		throw Error();
+		throw Error("Bledna wyplata");
 	wyplata=_wyplata;
 	if(_nrRachunku=="")
-		throw Error();
+		throw Error("Bledny numer rachunku");
 	nrRachunku=_nrRachunku;
 //	if Sytuacja wyj¹tkowa dla daty           UZUPELNIC !!!
 	dataZatrudnienia=_dataZatrudnienia;
@@ -24,14 +24,14 @@ Pracownik::Pracownik(const unsigned int _id,const string _imie, const string _na
 void Pracownik::setWyplata(const float _wyplata)
 {
 	if (_wyplata<=0)
-		throw Error();
+		throw Error("Bledna wyplata");
 	wyplata=_wyplata;
 }
 
 void Pracownik::setNrRachunku(const string _nrRachunku)
 {
 	if(_nrRachunku=="")
-		throw Error();
+		throw Error("Bledny numer rachunku");
 	nrRachunku=_nrRachunku;
 }
 

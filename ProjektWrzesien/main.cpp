@@ -8,7 +8,6 @@
 #include "Przycisk.h"
 #include "Menu.h"
 
-
 void DeserializujPracownicy(vector<Pracownik> &Pracownicy)  // ta funkcja nie moze byc w klasie bcs vector jest tak jakby tablica obiektow i wtedy kazdy obiekt by chcial wykonywac ta sama operacje..
 {
 	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;
@@ -136,6 +135,8 @@ void html_klienci(vector<Klient> &Klienci)
 
 int main()
 {
+	try
+	{
 	vector<Klient> Klienci;
 	vector<Pracownik> Pracownicy;
 
@@ -154,7 +155,10 @@ int main()
 	//html_pracownicy(Pracownicy);  dziala ale komentuje zeby sie za kazdym razem przy uruchamianiu nie robilo to ;)
 	//html_klienci(Klienci);
 
-
+	} catch(Error &E)
+	{
+		E.getWiadomosc();
+	}
 	cin.get();
 	
 };
