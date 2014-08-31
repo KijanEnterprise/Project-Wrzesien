@@ -18,8 +18,7 @@ Pracownik::Pracownik(const unsigned int _id,const string _imie, const string _na
 	nrRachunku=_nrRachunku;
 //	if Sytuacja wyj¹tkowa dla daty           UZUPELNIC !!!
 	dataZatrudnienia=_dataZatrudnienia;
-	
-	}
+}
 
 void Pracownik::setWyplata(const float _wyplata)
 {
@@ -41,28 +40,12 @@ void Pracownik::setDataZatrudnienia(tm *_dataZatrudnienia)
 	dataZatrudnienia=_dataZatrudnienia;
 }
 
-void Pracownik::serializuj()
-{
-
-}
-
-void Pracownik::deserializuj()
-{
-}
-
 void Pracownik::wyswietl()
 {
 	char bufor[64];
 	strftime(bufor,sizeof(bufor),"%d-%m-%Y",dataZatrudnienia);
-	cout << getId() << "\t" << getImie() << "\t" << getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << "\t" <<  getWyplata() << "\t" << getNrRachunku() << "\t" << bufor << endl;
+	cout << "\tID pracownika "<< getId() << "\n\n" << getImie() << " " << getNazwisko() << "\n\nTelefon kontaktowy: " << getTelefon() << "\n\nEmail: " << getEmail() << "\n\nAdres: " << getAdres() << "\n\nRachunek: " <<getNrRachunku() << "\n\nWynagrodzenie: " <<  getWyplata() <<" zl" << "\n\nData zatrudnienia: " << bufor << "\n\n\n\n";
 }
-
-void Pracownik::exportHTML()
-{
-
-}
-
-
 
 bool Pracownik::operator == (const Pracownik &L) const
 {

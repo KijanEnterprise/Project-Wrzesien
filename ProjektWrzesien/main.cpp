@@ -65,8 +65,9 @@ void SerializujPracownicy(vector<Pracownik> &Pracownicy)
 {
 	fstream plik;
 	plik.open("dane//pracownicy.csv",std::ios::out);
-	for(int i=0;i<Pracownicy.size();i++) plik << Pracownicy[i].getId() << ";" << Pracownicy[i].getImie() << ";" << Pracownicy[i].getNazwisko() << ";" << Pracownicy[i].getTelefon() << ";" << Pracownicy[i].getEmail() << ";" << Pracownicy[i].getAdres() << ";" << Pracownicy[i].getWyplata() << ";" << Pracownicy[i].getNrRachunku() <<  ";" << mktime(&Pracownicy[i].getDataZatrudnienia()) << endl;
-	cout << "Lista pracownikow zostala zapisana!" << endl;
+	for(int i=0;i<Pracownicy.size();i++) 
+		plik << Pracownicy[i].getId() << ";" << Pracownicy[i].getImie() << ";" << Pracownicy[i].getNazwisko() << ";" << Pracownicy[i].getTelefon() << ";" << Pracownicy[i].getEmail() << ";" << Pracownicy[i].getAdres() << ";" << Pracownicy[i].getWyplata() << ";" << Pracownicy[i].getNrRachunku() <<  ";" << mktime(&Pracownicy[i].getDataZatrudnienia()) << endl;
+	cout << "\n\nLista pracownikow zostala zapisana!" << endl;
 	plik.close();
 }
 
@@ -74,27 +75,27 @@ void SerializujKlienci(vector<Klient> &Klienci)
 {
 	fstream plik;
 	plik.open("dane//klienci.csv",std::ios::out);
-	for(int i=0;i<Klienci.size();i++) plik << Klienci[i].getId() << ";" << Klienci[i].getImie() << ";" << Klienci[i].getNazwisko() << ";" << Klienci[i].getTelefon() << ";" << Klienci[i].getEmail() << ";" << Klienci[i].getAdres() << endl;
-	cout << "Lista klientow zostala zapisana!" << endl;
+	for(int i=0;i<Klienci.size();i++) 
+		plik << Klienci[i].getId() << ";" << Klienci[i].getImie() << ";" << Klienci[i].getNazwisko() << ";" << Klienci[i].getTelefon() << ";" << Klienci[i].getEmail() << ";" << Klienci[i].getAdres() << endl;
+	cout << "\n\nLista klientow zostala zapisana!" << endl;
 	plik.close();
 }
 
 void WyswietlPracownicy(vector<Pracownik> &Pracownicy)
 {
-	cout << "LP\t" << "ID\t" << "IMIE\t" << "NAZWISKO\t" << "TELEFON\t" << "EMAIL\t" << "ADRES\t" << "WYPLATA\t" << "NR RACHUNKU\t" << "DATA ZATRUDNIENIA\t" << endl;
+	cout <<"\t\tLISTA PRACOWNIKOW" << endl << endl;
 	for(int i=0;i<Pracownicy.size();i++)
 	{
-		cout << i+1 << "\t";
 		Pracownicy[i].wyswietl();
 	}
 }
 
 void WyswietlKlienci(vector<Klient> &Klienci)
 {
-	cout << "LP\t" << "ID\t" << "IMIE\t" << "NAZWISKO\t" << "TELEFON\t" << "EMAIL\t" << "ADRES" << endl;
+	cout <<"\tLISTA KLIENTOW\n\n"<< endl;
+	cout << "ID\t" << "IMIE\t" << "NAZWISKO\t" << "TELEFON\t" << "EMAIL\t" << "ADRES" << endl << endl;
 	for(int i=0;i<Klienci.size();i++)
 	{
-		cout << i+1 << "\t";
 		Klienci[i].wyswietl();
 	}
 }
@@ -139,9 +140,8 @@ int main()
 	{
 	vector<Klient> Klienci;
 	vector<Pracownik> Pracownicy;
-
-
-	cout << "TEST 0.000001e" << endl;
+	
+	cout << "\tPROJEKT Wykonany przez Kijan Enterpeises!\n\n\n" << endl;
 	DeserializujPracownicy(Pracownicy);
 	DeserializujKlienci(Klienci);
 
@@ -152,7 +152,7 @@ int main()
 	SerializujPracownicy(Pracownicy);
 	SerializujKlienci(Klienci);
 
-	//html_pracownicy(Pracownicy);  dziala ale komentuje zeby sie za kazdym razem przy uruchamianiu nie robilo to ;)
+	//html_pracownicy(Pracownicy);  //dziala ale komentuje zeby sie za kazdym razem przy uruchamianiu nie robilo to ;)
 	//html_klienci(Klienci);
 
 	} catch(Error &E)

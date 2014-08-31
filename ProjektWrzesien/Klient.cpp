@@ -11,23 +11,9 @@ Klient::Klient(const unsigned int _id,const string _imie,const string _nazwisko,
 	setAdres(_adres);
 }
 
-void Klient::serializuj()	
-{
-
-}
-
-void Klient::deserializuj()
-{
-
-}
-
-void Klient::exportHTML()
-{
-}
-
 void Klient::wyswietl()
 {
-	cout << getId() << "\t" << getImie() << "\t" <<  getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << endl;
+	cout << getId() << "\t" << getImie() << "\t" <<  getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << endl << endl;
 } 
 
 bool Klient::operator == (const Klient &L) const

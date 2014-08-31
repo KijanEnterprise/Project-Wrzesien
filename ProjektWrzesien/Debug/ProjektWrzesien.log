@@ -1,4 +1,4 @@
-﻿Build started 2014-08-30 17:46:38.
+﻿Build started 2014-09-01 00:37:33.
      1>Project "C:\Users\alexc_000\Documents\Project-Wrzesien\ProjektWrzesien\ProjektWrzesien.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\ProjektWrzesien.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -10,11 +10,11 @@
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(99) : see declaration of 'gmtime'
      1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(17): warning C4101: 'data' : unreferenced local variable
      1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(68): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(77): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(85): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(95): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(109): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(126): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(87): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(97): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(127): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ProjektWrzesien.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.lib" /MACHINE:X86 Debug\Czlowiek.obj
          Debug\Error.obj
@@ -36,4 +36,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.55
+Time Elapsed 00:00:01.52
