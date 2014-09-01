@@ -13,7 +13,8 @@ Klient::Klient(const unsigned int _id,const string _imie,const string _nazwisko,
 
 void Klient::wyswietl()
 {
-	cout << getId() << "\t" << getImie() << "\t" <<  getNazwisko() << "\t" << getTelefon() << "\t" << getEmail() << "\t" << getAdres() << endl << endl;
+	cout << "\n\tID klienta "<< getId() << "\n\n" << getImie() << " " <<  getNazwisko() << "\n\nNr telefonu: " << getTelefon() << "\n\nEmail: " 
+		<< getEmail() << "\n\nAdres: " << getAdres() << "\n\n\n";
 } 
 
 bool Klient::operator == (const Klient &L) const

@@ -13,3 +13,9 @@ Sprzet::Sprzet(const string _producent, const string _model, const TypSprzetu _r
 	rodzaj=_rodzaj;
 	opis=_opis;
 }
+
+void Sprzet::wyswietl()
+{
+	cout << "\nProducent: " << getProducent() << "\n\nModel: " << getModel() << "Rodzaj sprzety: " <<  getRodzaj() << "\n\nOpis: " 
+		<< getOpis() << "\n\n\n";
+} 
