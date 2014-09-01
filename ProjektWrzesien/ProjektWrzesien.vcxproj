@@ -62,12 +62,16 @@
   <ItemGroup>
     <ClCompile Include="Czlowiek.cpp" />
     <ClCompile Include="Error.cpp" />
+    <ClCompile Include="Klienci.cpp" />
     <ClCompile Include="Klient.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Pracownicy.cpp" />
     <ClCompile Include="Pracownik.cpp" />
     <ClCompile Include="Przycisk.cpp" />
     <ClCompile Include="Sprzet.cpp" />
+    <ClCompile Include="Sprzety.cpp" />
+    <ClCompile Include="Zlecenia.cpp" />
     <ClCompile Include="Zlecenie.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +81,12 @@
     <ClInclude Include="Klienci.h" />
     <ClInclude Include="Klient.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Pracownicy.h" />
     <ClInclude Include="Pracownik.h" />
     <ClInclude Include="Przycisk.h" />
     <ClInclude Include="Sprzet.h" />
+    <ClInclude Include="Sprzety.h" />
+    <ClInclude Include="Zlecenia.h" />
     <ClInclude Include="Zlecenie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
