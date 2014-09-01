@@ -11,7 +11,7 @@ using namespace std;
 
 class Czlowiek
 {
-private:
+protected:
 	unsigned int id;
 	string imie;
 	string nazwisko;

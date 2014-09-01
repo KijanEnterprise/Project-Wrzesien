@@ -20,4 +20,5 @@ public:
 	string getModel(){return model;}
 	TypSprzetu getRodzaj(){return rodzaj;}
 	string getOpis(){return opis;}
+	string rodzajNaString();
 };

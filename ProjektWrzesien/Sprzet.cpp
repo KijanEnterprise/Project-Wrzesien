@@ -16,6 +16,55 @@ Sprzet::Sprzet(const string _producent, const string _model, const TypSprzetu _r
 
 void Sprzet::wyswietl()
 {
-	cout << "\nProducent: " << getProducent() << "\n\nModel: " << getModel() << "Rodzaj sprzety: " <<  getRodzaj() << "\n\nOpis: " 
+	cout << "\nProducent: " << getProducent() << "\n\nModel: " << getModel() << "\n\nRodzaj sprzety: " <<  rodzajNaString() << "\n\nOpis: " 
 		<< getOpis() << "\n\n\n";
 } 
+
+string Sprzet::rodzajNaString()
+{
+	switch(rodzaj)
+	{
+	case PlytaGlowna:
+		return "Plyta Glowna";
+		break;
+	case Procesor:
+		return "Procesor";
+		break;
+	case PamiecRAM:
+		return "Pamiec RAM";
+		break;
+	case DyskTwardy:
+		return "Karta Graficzna";
+		break;
+	case KartaDzwiekowa:
+		return "Karta Dzwiekowa";
+		break;
+	case KartaSieciowa:
+		return "Karta Sieciowa";
+		break;
+	case Naped:
+		return "Naped";
+		break;
+	case Zasilacz:
+		return "Zasilacz";
+		break;
+	case Myszka:
+		return "Myszka";
+		break;
+	case Klawiatura:
+		return "Klawiatura";
+		break;
+	case KameraInternetowa:
+		return "KameraInternetowa";
+		break;
+	case Sluchawki:
+		return "Sluchawki";
+		break;
+	case Glosniki:
+		return "Glosniki";
+		break;
+	default:
+		return "Nie sprecyzowano";
+		break;
+	}
+}

@@ -71,5 +71,8 @@
     <ClInclude Include="Przycisk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Klienci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
 #pragma once
 #include "Czlowiek.h"
+#include "Error.h"
+#include <iostream>
 
 
 class Klient: public Czlowiek

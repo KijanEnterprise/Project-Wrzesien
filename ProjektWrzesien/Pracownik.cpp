@@ -1,7 +1,7 @@
 #include "Pracownik.h"
 
-Pracownik::Pracownik(const unsigned int _id,const string _imie, const string _nazwisko, const string _telefon, const string _email, const string _adres,
-	const float _wyplata, const string _nrRachunku, tm *_dataZatrudnienia):
+Pracownik::Pracownik(const unsigned int _id,const string _imie, const string _nazwisko, const string _telefon, const string _email, 
+	const string _adres, const float _wyplata, const string _nrRachunku, tm *_dataZatrudnienia):
 	Czlowiek(_id, _imie, _nazwisko, _telefon, _email, _adres) // UWAGA - Wymagany konstruktor klasy bazowej [do sprawdzenia/poprawy]
 {
 	setId(_id);
@@ -44,10 +44,12 @@ void Pracownik::wyswietl()
 {
 	char bufor[64];
 	strftime(bufor,sizeof(bufor),"%d-%m-%Y",dataZatrudnienia);
-	cout << "\tID pracownika "<< getId() << "\n\n" << getImie() << " " << getNazwisko() << "\n\nTelefon kontaktowy: " << getTelefon() << "\n\nEmail: " << getEmail() << "\n\nAdres: " << getAdres() << "\n\nRachunek: " <<getNrRachunku() << "\n\nWynagrodzenie: " <<  getWyplata() <<" zl" << "\n\nData zatrudnienia: " << bufor << "\n\n\n\n";
+	cout << "\tID pracownika "<< getId() << "\n\n" << getImie() << " " << getNazwisko() << "\n\nTelefon kontaktowy: " << getTelefon() 
+		<< "\n\nEmail: " << getEmail() << "\n\nAdres: " << getAdres() << "\n\nRachunek: " <<getNrRachunku() << "\n\nWynagrodzenie: " 
+		<<  getWyplata() <<" zl" << "\n\nData zatrudnienia: " << bufor << "\n\n\n\n";
 }
 
 bool Pracownik::operator == (const Pracownik &L) const
 {
-	return 0; //return (id == L.id);											// DO POPRAWY !!!
+	return (id == L.id);											
 }

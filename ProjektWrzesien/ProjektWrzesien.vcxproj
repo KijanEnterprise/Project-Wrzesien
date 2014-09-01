@@ -74,6 +74,7 @@
     <ClInclude Include="Const.h" />
     <ClInclude Include="Czlowiek.h" />
     <ClInclude Include="Error.h" />
+    <ClInclude Include="Klienci.h" />
     <ClInclude Include="Klient.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Pracownik.h" />
