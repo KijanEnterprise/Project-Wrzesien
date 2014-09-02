@@ -1,6 +1,12 @@
 #include "Zlecenia.h"
 
-void Zlecenia::OdczytZlecenia()
+Zlecenia::Zlecenia()
+{
+
+}
+
+
+void Zlecenia::Deserializuj()
 {
 	string d1,d2,d3,d5,d6,d7,d8,tempString;
 	int tempInt;
@@ -9,6 +15,8 @@ void Zlecenia::OdczytZlecenia()
 	char koniec='\n';
 	fstream tekst;
 	tekst.open("dane//zlecenia.csv");
+	if(tekst!=0)
+	{
 	while(!tekst.eof())
 	{
 		getline(tekst,d1,oddzielnik);
@@ -27,21 +35,24 @@ void Zlecenia::OdczytZlecenia()
 			listaZlecen.push_back(z);
 		}
 	}
+	}else
+		throw Error("Brak pliku zlecenia!");
 }
 
 
-void Zlecenia::SerializujZlecenia()
+void Zlecenia::Serializuj ()
 {
 	fstream plik;
 	plik.open("dane//zlecenia.csv",std::ios::out);
 	for(int i=0;i<listaZlecen.size();i++) 
-		plik << listaZlecen[i].getIdZlecenia() << ";" << listaZlecen[i].getIdPracownika() << ";" << listaZlecen[i].getIdKlienta() << ";" << listaZlecen[i].getStanZlecenia() 
-		<< ";" << listaZlecen[i].getKoszt() << ";" << listaZlecen[i].getUwagi() << ";" << listaZlecen[i].getDataPrzyjecia() << ";" << listaZlecen[i].getDataWydania();
-	cout << "\n\nLista klientow zostala zapisana!" << endl;
+		plik << endl << listaZlecen[i].getIdZlecenia() << ";" << listaZlecen[i].getIdPracownika() << ";" << listaZlecen[i].getIdKlienta() << ";" 
+		<< listaZlecen[i].getStanZlecenia() << ";" << listaZlecen[i].getKoszt() << ";" << listaZlecen[i].getUwagi() << ";" << listaZlecen[i].getDataPrzyjecia() << ";" 
+		<< listaZlecen[i].getDataWydania();
+	cout << "\nLista zlecen zostala zapisana!\n" << endl;
 	plik.close();
 }
 
-void Zlecenia::WyswietlZlecenie()
+void Zlecenia::Wyswietl()
 {
 	cout <<"\t\tLISTA ZLECEN" << endl << endl;
 	for(int i=0;i<listaZlecen.size();i++)
@@ -51,7 +62,7 @@ void Zlecenia::WyswietlZlecenie()
 }
 
 
-void Zlecenia::html_zlecenia()
+void Zlecenia::html()
 {
 	fstream plik;
 	plik.open("html//zlecenia.html",std::ios::out);

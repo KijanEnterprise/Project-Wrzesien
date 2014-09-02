@@ -1,6 +1,6 @@
 #include "Pracownicy.h"
 
-void Pracownicy::DeserializujPracownicy() 
+void Pracownicy::Deserializuj() 
 {
 	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;
 	char separator = ';';
@@ -9,40 +9,45 @@ void Pracownicy::DeserializujPracownicy()
 	tm *data;
 	fstream plik;
 	plik.open("dane//pracownicy.csv");
-	while (!plik.eof())
+	if(plik!=0)
 	{
-		getline(plik,dana0,separator);
-		getline(plik,dana1,separator);
-		getline(plik,dana2,separator);
-		getline(plik,dana3,separator);
-		getline(plik,dana4,separator);
-		getline(plik,dana5,separator);
-		getline(plik,dana6,separator);
-		getline(plik,dana7,separator);
-		getline(plik,dana8,konieclini);
-		czas=atoi(dana8.c_str());
-		if(atoi(dana0.c_str())!=0)
+		while (!plik.eof())
 		{
-			Pracownik pracownik(atoi(dana0.c_str()),dana1,dana2,dana3,dana4,dana5,atof(dana6.c_str()),dana7,gmtime(&czas));
-			listaPracownikow.push_back(pracownik);
-		}
-	}
+			getline(plik,dana0,separator);
+			getline(plik,dana1,separator);
+			getline(plik,dana2,separator);
+			getline(plik,dana3,separator);
+			getline(plik,dana4,separator);
+			getline(plik,dana5,separator);
+			getline(plik,dana6,separator);
+			getline(plik,dana7,separator);
+			getline(plik,dana8,konieclini);
+			czas=atoi(dana8.c_str());
+			if(atoi(dana0.c_str())!=0)
+			{
+				Pracownik pracownik(atoi(dana0.c_str()),dana1,dana2,dana3,dana4,dana5,atof(dana6.c_str()),dana7,gmtime(&czas));
+				listaPracownikow.push_back(pracownik);
+			}
+		} 
+	}else
+		throw Error("Brak pliku pracownikow!");
+
 	plik.close();
 }
 
-void Pracownicy::SerializujPracownicy()
+void Pracownicy::Serializuj()
 {
 	fstream plik;
 	plik.open("dane//pracownicy.csv",std::ios::out);
 	for(int i=0;i<listaPracownikow.size();i++) 
-		plik << listaPracownikow[i].getId() << ";" << listaPracownikow[i].getImie() << ";" << listaPracownikow[i].getNazwisko() << ";" 
+		plik << endl << listaPracownikow[i].getId() << ";" << listaPracownikow[i].getImie() << ";" << listaPracownikow[i].getNazwisko() << ";" 
 		<< listaPracownikow[i].getTelefon() << ";" << listaPracownikow[i].getEmail() << ";" << listaPracownikow[i].getAdres() << ";" 
 		<< listaPracownikow[i].getWyplata() << ";" << listaPracownikow[i].getNrRachunku() <<  ";" << mktime(&listaPracownikow[i].getDataZatrudnienia());
-	cout << "\n\nLista pracownikow zostala zapisana!" << endl;
+	cout << "Lista pracownikow zostala zapisana!\n" << endl;
 	plik.close();
 }
 
-void Pracownicy::WyswietlPracownicy()
+void Pracownicy::Wyswietl()
 {
 	cout <<"\t\tLISTA PRACOWNIKOW" << endl << endl;
 	for(int i=0;i<listaPracownikow.size();i++)
@@ -52,7 +57,7 @@ void Pracownicy::WyswietlPracownicy()
 }
 
 
-void Pracownicy::html_pracownicy()
+void Pracownicy::html()
 {
 	fstream plik;
 	plik.open("html//pracownicy.html",std::ios::out);

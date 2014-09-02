@@ -8,8 +8,9 @@ class Sprzety
 private:
 	vector<Sprzet> listaSprzetow;
 public:
-	void DeserializujSprzet();
-	void SerializujSprzet();
-	void WyswietlSprzet();
-	void html_sprzet();
+	Sprzety ();
+	void Deserializuj();
+	void Serializuj();
+	void Wyswietl();
+	void html();
 };

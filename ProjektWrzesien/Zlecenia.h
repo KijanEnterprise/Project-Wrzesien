@@ -7,8 +7,8 @@ private:
 	vector<Zlecenie> listaZlecen;
 public:
 	Zlecenia();
-	void OdczytZlecenia();
-	void SerializujZlecenia();
-	void WyswietlZlecenie();
-	void html_zlecenia();
+	void Deserializuj();
+	void Serializuj();
+	void Wyswietl();
+	void html();
 };

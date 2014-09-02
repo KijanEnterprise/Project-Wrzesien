@@ -1,13 +1,14 @@
 #include "Klienci.h"
 
-void Klienci::DeserializujKlienci()
+void Klienci::Deserializuj()
 {
 	string dana0,dana1,dana2,dana3,dana4,dana5;
 	char separator = ';';
 	char konieclini = '\n';
 	fstream plik;
 	plik.open("dane//klienci.csv");
-
+	if(plik!=0)
+	{
 	while (!plik.eof())
 	{		
 		getline(plik,dana0,separator);
@@ -22,20 +23,22 @@ void Klienci::DeserializujKlienci()
 		}
 	}
 	plik.close();
+	}else
+		throw Error("Brak pliku klientow!");
 }
 
-void Klienci::SerializujKlienci()
+void Klienci::Serializuj()
 {
 	fstream plik;
 	plik.open("dane//klienci.csv",std::ios::out);
 	for(int i=0;i<listaKlientow.size();i++) 
-		plik << listaKlientow[i].getId() << ";" << listaKlientow[i].getImie() << ";" << listaKlientow[i].getNazwisko() << ";" << listaKlientow[i].getTelefon() 
+		plik << endl << listaKlientow[i].getId() << ";" << listaKlientow[i].getImie() << ";" << listaKlientow[i].getNazwisko() << ";" << listaKlientow[i].getTelefon() 
 		<< ";" << listaKlientow[i].getEmail() << ";" << listaKlientow[i].getAdres();
-	cout << "\n\nLista klientow zostala zapisana!" << endl;
+	cout << "Lista klientow zostala zapisana!\n" << endl;
 	plik.close();
 }
 
-void Klienci::WyswietlKlienci()
+void Klienci::Wyswietl()
 {
 	cout <<"\t\tLISTA KLIENTOW" << endl << endl;
 	for(int i=0;i<listaKlientow.size();i++)
@@ -44,7 +47,7 @@ void Klienci::WyswietlKlienci()
 	}
 }
 
-void Klienci::html_klienci()
+void Klienci::html()
 {
 	fstream plik;
 	plik.open("html//klienci.html",std::ios::out);

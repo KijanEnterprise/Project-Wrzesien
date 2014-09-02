@@ -1,6 +1,11 @@
 #include "Sprzety.h"
 
-void Sprzety::DeserializujSprzet()
+Sprzety::Sprzety()
+{
+	
+}
+
+void Sprzety::Deserializuj()
 {
 	string dana0,dana1,dana3,dana5;
 	int dana4;
@@ -9,34 +14,37 @@ void Sprzety::DeserializujSprzet()
 	char konieclini='\n';
 	fstream plik;
 	plik.open("dane//sprzet.csv");
-	while (!plik.eof())
+	if(plik!=0)
 	{
-		getline(plik,dana0,separator);
-		getline(plik,dana1,separator);
-		getline(plik,dana5,separator);
-		getline(plik,dana3,konieclini);
-		dana4=atoi(dana5.c_str());
-		dana2=static_cast<TypSprzetu>(dana4);
-		
-		
+		while (!plik.eof())
+		{
+			getline(plik,dana0,separator);
+			getline(plik,dana1,separator);
+			getline(plik,dana5,separator);
+			getline(plik,dana3,konieclini);
+			dana4=atoi(dana5.c_str());
+			dana2=static_cast<TypSprzetu>(dana4);
+			
 			Sprzet sprzet(dana0,dana1,dana2,dana3);  
 			listaSprzetow.push_back(sprzet);
-		
-	}
+		}
+	}else 
+		throw Error("Brak pliku sprzetu!");
 	plik.close();
 }
 
-void Sprzety::SerializujSprzet()
+void Sprzety::Serializuj()
 {
 	fstream plik;
 	plik.open("dane//sprzet.csv",std::ios::out);
+	plik.clear();
 	for(int i=0;i<listaSprzetow.size();i++) 
-		plik << listaSprzetow[i].getProducent() << ";" << listaSprzetow[i].getModel()<< ";"<< listaSprzetow[i].getRodzaj() << ";"<< listaSprzetow[i].getOpis();
-	cout << "\n\nLista sprzetu zostala zapisana!" << endl;
+		plik << endl << listaSprzetow[i].getProducent() << ";" << listaSprzetow[i].getModel()<< ";"<< listaSprzetow[i].getRodzaj() << ";"<< listaSprzetow[i].getOpis();
+	cout << "Lista sprzetu zostala zapisana!\n";
 	plik.close();
 }
 
-void Sprzety::WyswietlSprzet()
+void Sprzety::Wyswietl()
 {
 	cout <<"\t\tLISTA SPRZETU" << endl << endl;
 	for(int i=0;i<listaSprzetow.size();i++)
@@ -45,7 +53,7 @@ void Sprzety::WyswietlSprzet()
 	}
 }
 
-void Sprzety::html_sprzet()
+void Sprzety::html()
 {
 	fstream plik;
 	plik.open("html//sprzet.html",std::ios::out);

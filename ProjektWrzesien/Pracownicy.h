@@ -6,8 +6,8 @@ class Pracownicy
 private:
 	vector <Pracownik> listaPracownikow;
 public:
-	void DeserializujPracownicy();
-	void SerializujPracownicy();
-	void WyswietlPracownicy();
-	void html_pracownicy();
+	void Deserializuj();
+	void Serializuj();
+	void Wyswietl();
+	void html();
 };

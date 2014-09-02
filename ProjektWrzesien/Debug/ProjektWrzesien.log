@@ -1,16 +1,13 @@
-﻿Build started 2014-09-01 22:51:15.
+﻿Build started 2014-09-02 16:08:38.
      1>Project "C:\Users\alexc_000\Documents\Project-Wrzesien\ProjektWrzesien\ProjektWrzesien.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\ProjektWrzesien.unsuccessfulbuild".
+         Creating "Debug\ProjektWrzesien.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Zlecenia.cpp main.cpp
-         main.cpp
-         Zlecenia.cpp
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(26): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(37): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(47): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(61): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Sprzety.cpp
+         Sprzety.cpp
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(41): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(50): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(63): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ProjektWrzesien.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.lib" /MACHINE:X86 Debug\Czlowiek.obj
          Debug\Error.obj
@@ -36,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.73
+Time Elapsed 00:00:01.45
