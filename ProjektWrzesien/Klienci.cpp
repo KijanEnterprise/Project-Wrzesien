@@ -1,5 +1,38 @@
 #include "Klienci.h"
 
+void Klienci::Dodaj()
+{
+	int ID;
+	string imie,nazwisko,telefon,email,adres;
+	cout<<"\t\tOkno dodawania nowego klienta\n\n";
+	cout<<"Podaj ID: ";
+	cin>>ID;
+	cout<<"\nPodaj imie: ";
+	cin>>imie;
+	cout<<"\nPodaj nazwisko: ";
+	cin>>nazwisko;
+	cout<<"\nPodaj telefon: ";
+	cin>>telefon;
+	cout<<"\nPodaj email: ";
+	cin>>email;
+	cout<<"\nPodaj adres: ";
+	cin>>adres;
+
+	Klient obiekt(ID,imie,nazwisko,telefon,email,adres);
+	listaKlientow.push_back(obiekt);
+}
+
+Klient Klienci::getKlient(int i)
+{
+	vector <Klient> ::iterator t;
+	for(t=listaKlientow.begin();t!=listaKlientow.end();t++)
+	{
+		if (i == t->getId())
+			return *t;
+	}throw Error("Bledne ID klienta");
+}
+	
+
 void Klienci::Deserializuj()
 {
 	string dana0,dana1,dana2,dana3,dana4,dana5;

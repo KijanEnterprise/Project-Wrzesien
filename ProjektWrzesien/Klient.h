@@ -1,6 +1,5 @@
 #pragma once
 #include "Czlowiek.h"
-#include "Error.h"
 #include <iostream>
 
 

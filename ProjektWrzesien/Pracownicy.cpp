@@ -1,5 +1,47 @@
 #include "Pracownicy.h"
 
+void Pracownicy::Dodaj()
+{
+	//int ID;
+	//string imie,nazwisko,telefon,email,adres,rachunek;
+	//float wyplata;
+	//cout<<"\t\tOkno dodawania nowego klienta\n\n";
+	//cout<<"Podaj ID: ";
+	//cin>>ID;
+	//cout<<"\nPodaj imie: ";
+	//cin>>imie;
+	//cout<<"\nPodaj nazwisko: ";
+	//cin>>nazwisko;
+	//cout<<"\nPodaj telefon: ";
+	//cin>>telefon;
+	//cout<<"\nPodaj email: ";
+	//cin>>email;
+	//cout<<"\nPodaj adres: ";
+	//cin>>adres;
+	//cout<<"\nPodaj wysokosc wyplaty: ";
+	//cin>>wyplata;
+	//cout<<"\nPodaj nr rachunku: ";
+	//cin>>rachunek;
+
+
+	//Pracownicy obiekt(ID,imie,nazwisko,telefon,email,adres,wyplata,rachunek,);
+	//listaPracownikow.push_back(obiekt);
+}
+
+
+Pracownik Pracownicy::getPracownik(int i)
+{
+	vector <Pracownik> ::iterator t;
+	int licznik;
+	for(t=listaPracownikow.begin();t!=listaPracownikow.end();t++)
+	{
+		if (i == t->getId())
+			return *t;
+		licznik++;
+	}throw Error("Bledne ID pracownika");
+}
+
+
 void Pracownicy::Deserializuj() 
 {
 	string dana0,dana1,dana2,dana3,dana4,dana5,dana6,dana7,dana8;

@@ -1,6 +1,6 @@
 #pragma once
 #include "Sprzet.h"
-#include "Czlowiek.h"
+
 using namespace std;
 
 class Sprzety
@@ -13,4 +13,6 @@ public:
 	void Serializuj();
 	void Wyswietl();
 	void html();
+	void Dodaj();
+	void Usun();
 };

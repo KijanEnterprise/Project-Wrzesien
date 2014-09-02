@@ -5,6 +5,30 @@ Sprzety::Sprzety()
 	
 }
 
+void Sprzety::Dodaj()
+{
+	string producent, model, opis;
+	int temp;
+	TypSprzetu rodzaj;
+	cout<<"\t\tOkno dodawania nowego Sprzetu\n\n";
+	cout<<"Podaj producenta: ";
+	cin>>producent;
+	cout<<"\nPodaj model: ";
+	cin>>model;
+	cout<<"\nRodzaje sprzetu:\nPlytaGlowna=0,\nProcesor=1,\nPamiecRAM=2,\nDyskTwardy=3,\nKartaGraficzna=4,\nKartaDzwiekowa=5,\nKartaSieciowa=6,\nNaped=7,\nZasilacz=8"
+		<< "\nMyszka=9,\nKlawiatura=10,\nKameraInternetowa=11,\nSluchawki=12,\nGlosniki=13,\nNieSprecyzowano=14.";
+	cout<<"\n\n\nPodaj rodzaj sprzetu: ";
+	cin>> temp;
+	cout<<"\nPodaj opis sprzetu: ";
+	cin>>opis;
+
+	rodzaj=static_cast<TypSprzetu>(temp);
+	Sprzet obiekt(producent,model,rodzaj,opis);
+	listaSprzetow.push_back(obiekt);
+}
+
+
+
 void Sprzety::Deserializuj()
 {
 	string dana0,dana1,dana3,dana5;

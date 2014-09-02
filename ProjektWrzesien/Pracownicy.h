@@ -10,4 +10,8 @@ public:
 	void Serializuj();
 	void Wyswietl();
 	void html();
+
+	Pracownik getPracownik(int i);
+	void Dodaj();
+	void Usun();
 };

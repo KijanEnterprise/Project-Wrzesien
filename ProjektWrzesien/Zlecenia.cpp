@@ -5,6 +5,36 @@ Zlecenia::Zlecenia()
 
 }
 
+void Zlecenia::Dodaj()
+{
+	int IDZlecenia,IDPracownika,IDKlienta,temp;
+	StanZlecenia stan;
+	float koszt;
+	string uwagi,przyjecie,wydanie;
+	cout<<"\t\tOkno dodawania nowego zlecenia\n\n";
+	cout<<"Podaj ID zlecenia: ";
+	cin>>IDZlecenia;
+	cout<<"\nPodaj ID pracownika: ";
+	cin>>IDPracownika;
+	cout<<"\nPodaj ID klienta: ";
+	cin>>IDKlienta;
+	cout<<"\nPodaj stan zamowienia: ";
+	cin>>temp;
+	cout<<"\nPodaj koszt zlecenia: ";
+	cin>>koszt;
+	cout<<"\nPodaj uwagi do zlecenia: ";
+	cin>>uwagi;
+	cout<<"\nPodaj date przyjecia zlecenia: ";
+	cin>>przyjecie;
+		cout<<"\nPodaj date wydania zlecenia: ";
+	cin>>wydanie;
+
+	stan=static_cast<StanZlecenia>(temp);
+	Zlecenie obiekt(IDZlecenia,IDPracownika,IDKlienta,stan,koszt,uwagi,przyjecie,wydanie);
+	listaZlecen.push_back(obiekt);
+}
+
+
 
 void Zlecenia::Deserializuj()
 {
