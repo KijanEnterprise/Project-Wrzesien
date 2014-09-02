@@ -5,6 +5,25 @@ Sprzety::Sprzety()
 	
 }
 
+
+
+void Sprzety::Wyszukaj (TypSprzetu typ)
+{
+	bool znaleziona=false;
+	vector <Sprzet> ::iterator t;
+	int j=0;
+	for(t=listaSprzetow.begin();t!=listaSprzetow.end();t++)
+	{
+		if (typ == t->getRodzaj())
+		{
+			t->wyswietl();
+			znaleziona=true;
+		} 
+	}
+	if(znaleziona==false)
+		cout << "Nie znaleziono pracownika!";
+}
+
 void Sprzety::Dodaj()
 {
 	string producent, model, opis;

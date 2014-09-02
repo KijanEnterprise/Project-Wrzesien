@@ -1,5 +1,6 @@
 #pragma once
 #include "Czlowiek.h"
+#include <time.h>
 
 class Pracownik: public Czlowiek
 {

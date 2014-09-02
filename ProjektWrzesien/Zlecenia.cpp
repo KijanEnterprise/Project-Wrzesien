@@ -5,6 +5,43 @@ Zlecenia::Zlecenia()
 
 }
 
+void Zlecenia::Wyszukaj (int id)
+{
+	bool znaleziona=false;
+	vector <Zlecenie> ::iterator t;
+	int j=0;
+	for(t=listaZlecen.begin();t!=listaZlecen.end();t++)
+	{
+		if (id == t->getIdZlecenia())
+		{
+			t->wyswietl();
+			znaleziona=true;
+		} 
+	}
+	if(znaleziona==false)
+		cout << "Nie znaleziono pracownika!";
+}
+
+void Zlecenia::Usun(int i)
+{
+	bool znaleziona=false;
+	vector <Zlecenie> ::iterator t;
+	int j=0;
+	for(t=listaZlecen.begin();t!=listaZlecen.end();t++)
+	{
+		if (i == t->getIdZlecenia())
+		{
+			listaZlecen[j]=listaZlecen[listaZlecen.size()-1];
+			listaZlecen.pop_back();
+			znaleziona=true;
+		} else
+			j++;
+	}
+	if(znaleziona==false)
+		cout << "Podano bledne ID pracownika!";
+}
+
+
 void Zlecenia::Dodaj()
 {
 	int IDZlecenia,IDPracownika,IDKlienta,temp;
@@ -18,7 +55,7 @@ void Zlecenia::Dodaj()
 	cin>>IDPracownika;
 	cout<<"\nPodaj ID klienta: ";
 	cin>>IDKlienta;
-	cout<<"\nPodaj stan zamowienia: ";
+	cout<<"Wybierz stan: \nPrzyjety=0,\nDiagnozowany=1,\nOczekujacyNaCzesci=2,\nGotowyDoOdbioru=3,\nWydany=4 "<<"\n\nPodaj stan zamowienia: ";
 	cin>>temp;
 	cout<<"\nPodaj koszt zlecenia: ";
 	cin>>koszt;
@@ -56,7 +93,7 @@ void Zlecenia::Deserializuj()
 		getline(tekst,d5,oddzielnik);
 		getline(tekst,d6,oddzielnik);
 		getline(tekst,d7,oddzielnik);
-		getline(tekst,d8,oddzielnik);
+		getline(tekst,d8,koniec);
 		tempInt=atoi(tempString.c_str());
 		d4=static_cast<StanZlecenia>(tempInt);
 		//if(atoi(d1.c_str())!=0)

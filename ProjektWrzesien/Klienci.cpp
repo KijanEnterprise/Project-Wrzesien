@@ -1,5 +1,42 @@
 #include "Klienci.h"
 
+void Klienci::Wyszukaj (string nazwisko)
+{
+	bool znaleziona=false;
+	vector <Klient> ::iterator t;
+	int j=0;
+	for(t=listaKlientow.begin();t!=listaKlientow.end();t++)
+	{
+		if (nazwisko == t->getNazwisko())
+		{
+			t->wyswietl();
+			znaleziona=true;
+		} 
+	}
+	if(znaleziona==false)
+		cout << "Nie znaleziono klienta!";
+}
+
+void Klienci::Usun(int i)
+{
+	bool znaleziona=false;
+	vector <Klient> ::iterator t;
+	int j=0;
+	for(t=listaKlientow.begin();t!=listaKlientow.end();t++)
+	{
+		if (i == t->getId())
+		{
+			listaKlientow[j]=listaKlientow[listaKlientow.size()-1];
+			listaKlientow.pop_back();
+			znaleziona=true;
+		} else
+			j++;
+	}
+	if(znaleziona==false)
+		cout << "Podano bledne ID klienta!";
+}
+
+
 void Klienci::Dodaj()
 {
 	int ID;

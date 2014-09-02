@@ -17,10 +17,6 @@ protected:
 public:
 	Zlecenie(int _idZlecenia, const int _idPracownika, const int _idKlienta, const StanZlecenia _stanZlecenia, const float _koszt, 
 		const string _uwagi, const string _dataPrzyjecia, const string _dataWydania);
-	void serializuj();
-	void deserializuj();
-	void wyswietl();
-	void exportHTML();
 
 	string stanToString();
 	int getIdZlecenia(){ return idZlecenia;}
@@ -31,6 +27,8 @@ public:
 	string getUwagi(){ return uwagi;}
 	string getDataPrzyjecia(){ return dataPrzyjecia;}
 	string getDataWydania(){ return dataWydania;}
+
+	void wyswietl();
 
 	void setIdZlecenia(const int _idZlecenia);
 	void setIdPracownika(const int _idPracownika);

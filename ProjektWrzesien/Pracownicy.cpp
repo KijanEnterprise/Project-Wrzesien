@@ -1,31 +1,70 @@
 #include "Pracownicy.h"
 
+void Pracownicy::Wyszukaj (string nazwisko)
+{
+	bool znaleziona=false;
+	vector <Pracownik> ::iterator t;
+	int j=0;
+	for(t=listaPracownikow.begin();t!=listaPracownikow.end();t++)
+	{
+		if (nazwisko == t->getNazwisko())
+		{
+			t->wyswietl();
+			znaleziona=true;
+		} 
+	}
+	if(znaleziona==false)
+		cout << "Nie znaleziono pracownika!";
+}
+
+void Pracownicy::Usun(int i)
+{
+	bool znaleziona=false;
+	vector <Pracownik> ::iterator t;
+	int j=0;
+	for(t=listaPracownikow.begin();t!=listaPracownikow.end();t++)
+	{
+		if (i == t->getId())
+		{
+			listaPracownikow[j]=listaPracownikow[listaPracownikow.size()-1];
+			listaPracownikow.pop_back();
+			znaleziona=true;
+		} else
+			j++;
+	}
+	if(znaleziona==false)
+		cout << "Podano bledne ID pracownika!";
+}
+
 void Pracownicy::Dodaj()
 {
-	//int ID;
-	//string imie,nazwisko,telefon,email,adres,rachunek;
-	//float wyplata;
-	//cout<<"\t\tOkno dodawania nowego klienta\n\n";
-	//cout<<"Podaj ID: ";
-	//cin>>ID;
-	//cout<<"\nPodaj imie: ";
-	//cin>>imie;
-	//cout<<"\nPodaj nazwisko: ";
-	//cin>>nazwisko;
-	//cout<<"\nPodaj telefon: ";
-	//cin>>telefon;
-	//cout<<"\nPodaj email: ";
-	//cin>>email;
-	//cout<<"\nPodaj adres: ";
-	//cin>>adres;
-	//cout<<"\nPodaj wysokosc wyplaty: ";
-	//cin>>wyplata;
-	//cout<<"\nPodaj nr rachunku: ";
-	//cin>>rachunek;
+	int ID;
+	string imie,nazwisko,telefon,email,adres,rachunek;
+	float wyplata;
+	tm *data;
+	cout<<"\t\tOkno dodawania nowego klienta\n\n";
+	cout<<"Podaj ID: ";
+	cin>>ID;
+	cout<<"\nPodaj imie: ";
+	cin>>imie;
+	cout<<"\nPodaj nazwisko: ";
+	cin>>nazwisko;
+	cout<<"\nPodaj telefon: ";
+	cin>>telefon;
+	cout<<"\nPodaj email: ";
+	cin>>email;
+	cout<<"\nPodaj adres: ";
+	cin>>adres;
+	cout<<"\nPodaj wysokosc wyplaty: ";
+	cin>>wyplata;
+	cout<<"\nPodaj nr rachunku: ";
+	cin>>rachunek;
+	cout<<"\Podaj date zatrudnienia: ";
+	//cin>>data;
 
 
-	//Pracownicy obiekt(ID,imie,nazwisko,telefon,email,adres,wyplata,rachunek,);
-	//listaPracownikow.push_back(obiekt);
+	Pracownik obiekt(ID,imie,nazwisko,telefon,email,adres,wyplata,rachunek,data);
+	listaPracownikow.push_back(obiekt);
 }
 
 
@@ -38,7 +77,7 @@ Pracownik Pracownicy::getPracownik(int i)
 		if (i == t->getId())
 			return *t;
 		licznik++;
-	}throw Error("Bledne ID pracownika");
+	}cout << "Bledne ID pracownika";
 }
 
 

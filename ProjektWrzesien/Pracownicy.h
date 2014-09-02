@@ -12,6 +12,7 @@ public:
 	void html();
 
 	Pracownik getPracownik(int i);
+	void Wyszukaj (string nazwisko);
 	void Dodaj();
-	void Usun();
+	void Usun(int i);
 };

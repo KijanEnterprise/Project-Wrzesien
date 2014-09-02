@@ -14,5 +14,5 @@ public:
 	void Wyswietl();
 	void html();
 	void Dodaj();
-	void Usun();
+	void Wyszukaj (TypSprzetu typ);
 };

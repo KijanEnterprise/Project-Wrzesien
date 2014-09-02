@@ -10,7 +10,8 @@ private:
 public:
 	Zlecenia();
 	void Dodaj();
-	void Usun();
+	void Usun(int i);
+	void Wyszukaj(int i);
 	void Deserializuj();
 	void Serializuj();
 	void Wyswietl();

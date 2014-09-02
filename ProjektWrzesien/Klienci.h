@@ -14,5 +14,6 @@ public:
 
 	Klient getKlient(int i);
 	void Dodaj();
-	void Usun();
+	void Usun(int i);
+	void Wyszukaj(string nazwisko);
 };

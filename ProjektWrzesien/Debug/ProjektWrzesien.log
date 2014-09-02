@@ -1,40 +1,27 @@
-﻿Build started 2014-09-02 21:41:41.
+﻿Build started 2014-09-02 23:51:48.
      1>Project "C:\Users\alexc_000\Documents\Project-Wrzesien\ProjektWrzesien\ProjektWrzesien.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\ProjektWrzesien.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Klienci.cpp Pracownicy.cpp Sprzety.cpp Zlecenia.cpp main.cpp
-         Klienci.cpp
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\klienci.cpp(67): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\klienci.cpp(77): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\klienci.cpp(90): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-         Compiling...
-         Pracownicy.cpp
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(70): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(70): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\time.inl(99) : see declaration of 'gmtime'
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(51): warning C4101: 'data' : unreferenced local variable
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(84): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(95): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(110): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\pracownicy.cpp(40): warning C4700: uninitialized local variable 'licznik' used
-         Compiling...
-         Sprzety.cpp
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(65): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(74): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\sprzety.cpp(87): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-         Compiling...
-         Zlecenia.cpp
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(64): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(77): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(88): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(102): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-         Skipping... (no relevant changes detected)
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Zlecenia.cpp main.cpp
          main.cpp
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(97): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(143): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(191): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(254): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(260): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\conio.h(128) : see declaration of 'getch'
+         Zlecenia.cpp
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(101): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(114): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(125): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\zlecenia.cpp(139): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+     1>c:\users\alexc_000\documents\project-wrzesien\projektwrzesien\main.cpp(220): warning C4700: uninitialized local variable 'typ' used
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ProjektWrzesien.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alexc_000\Documents\Project-Wrzesien\Debug\ProjektWrzesien.lib" /MACHINE:X86 Debug\Czlowiek.obj
          Debug\Error.obj
@@ -60,4 +47,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.19
+Time Elapsed 00:00:02.99
